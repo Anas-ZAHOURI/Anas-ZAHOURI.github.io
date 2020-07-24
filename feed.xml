@@ -1,10 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-07-25T01:34:11+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Anas ZAHOURI - Blog</title><subtitle>Hi, I’m Anas Zahouri. Java ninja, morning samurai, noon rock star, and night guru. I write #code. Titles are irrelevant. Interested in hiring my services? Please contact me by email &quot;zahouri.anas@gmail.com&quot;. I'm happy to hear from you! </subtitle><entry><title type="html">Programmation fonctionnelle en Java</title><link href="http://localhost:4000/java/fonctionnelle/2020/07/24/programmation-fonctionnelle-en-Java.html" rel="alternate" type="text/html" title="Programmation fonctionnelle en Java" /><published>2020-07-24T19:18:25+02:00</published><updated>2020-07-24T19:18:25+02:00</updated><id>http://localhost:4000/java/fonctionnelle/2020/07/24/programmation-fonctionnelle-en-Java</id><content type="html" xml:base="http://localhost:4000/java/fonctionnelle/2020/07/24/programmation-fonctionnelle-en-Java.html">&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Si vous souhaitez démystifier la programmation fonctionnelle et comprendre pourquoi et comment commencer à utiliser ce paradigme en JAVA, lisez cet article.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-07-25T01:47:04+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Anas ZAHOURI - Blog</title><subtitle>Hi, I’m Anas Zahouri. Java ninja, morning samurai, noon rock star, and night guru. I write #code. Titles are irrelevant. Interested in hiring my services? Please contact me by email &quot;zahouri.anas@gmail.com&quot;. I'm happy to hear from you! </subtitle><entry><title type="html">Programmation fonctionnelle en Java</title><link href="http://localhost:4000/java/fonctionnelle/2020/07/24/programmation-fonctionnelle-en-Java.html" rel="alternate" type="text/html" title="Programmation fonctionnelle en Java" /><published>2020-07-24T19:18:25+02:00</published><updated>2020-07-24T19:18:25+02:00</updated><id>http://localhost:4000/java/fonctionnelle/2020/07/24/programmation-fonctionnelle-en-Java</id><content type="html" xml:base="http://localhost:4000/java/fonctionnelle/2020/07/24/programmation-fonctionnelle-en-Java.html">&lt;blockquote&gt;
+  &lt;p&gt;Si vous souhaitez démystifier la programmation fonctionnelle et comprendre pourquoi et comment commencer à utiliser ce paradigme en JAVA, lisez cet article.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;h2 id=&quot;pourquoi-devrions-nous-utiliser-les-paradigmes-de-la-pf-dans-un-langage-oo-comme-le-java-&quot;&gt;Pourquoi devrions-nous utiliser les paradigmes de la PF dans un langage OO comme le JAVA ?&lt;/h2&gt;
 
@@ -14,22 +10,19 @@
   &lt;li&gt;
     &lt;p&gt;Écrivez moins de code et plus significatif : une meilleure lisibilité
 du code.&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;Éviter les effets secondaires en utilisant l’immuabilité et les
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Éviter les effets secondaires en utilisant l’immuabilité et les
 fonctions pures : Programmation concurrentielle plus facile.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;Des tests plus faciles : il est très facile de tester les fonctions.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;Débogage plus simple.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;Amusant à écrire.&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Des tests plus faciles : il est très facile de tester les fonctions.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Débogage plus simple.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Amusant à écrire.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
