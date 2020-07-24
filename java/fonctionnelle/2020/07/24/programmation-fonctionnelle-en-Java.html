@@ -114,11 +114,9 @@
 
 <p>Voici un exemple de fonction (méthode) pure en Java :</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java">	<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ObjectWithPureFunction</span><span class="o">{</span>
-
-		<span class="kd">public</span> <span class="kt">int</span> <span class="nf">sum</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
-
-		<span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="o">;</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java">	<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ObjetAvecFonctionPure</span><span class="o">{</span>
+		<span class="kd">public</span> <span class="kt">int</span> <span class="nf">somme</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+			<span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="o">;</span>
 		<span class="o">}</span>
 	<span class="o">}</span></code></pre></figure>
 
@@ -126,12 +124,11 @@
 
 <p>Contrairement à cela, voici un exemple de fonction non-pur :</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java">	<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ObjectWithNonPureFunction</span><span class="o">{</span>
-		<span class="kd">private</span> <span class="kt">int</span> <span class="n">value</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-		<span class="kd">public</span> <span class="kt">int</span> <span class="nf">add</span><span class="o">(</span><span class="kt">int</span> <span class="n">nextValue</span><span class="o">)</span> <span class="o">{</span>
-			<span class="k">this</span><span class="o">.</span><span class="na">value</span> <span class="o">+=</span> <span class="n">nextValue</span><span class="o">;</span>
-
-			<span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">value</span><span class="o">;</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java">	<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ObjetAvecFonctionNonPure</span><span class="o">{</span>
+		<span class="kd">private</span> <span class="kt">int</span> <span class="n">valeur</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+		<span class="kd">public</span> <span class="kt">int</span> <span class="nf">add</span><span class="o">(</span><span class="kt">int</span> <span class="n">autreValeur</span><span class="o">)</span> <span class="o">{</span>
+			<span class="k">this</span><span class="o">.</span><span class="na">valeur</span> <span class="o">+=</span> <span class="n">autreValeur</span><span class="o">;</span>
+			<span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">valeur</span><span class="o">;</span>
 		<span class="o">}</span>
 	<span class="o">}</span></code></pre></figure>
 
@@ -152,7 +149,7 @@
 
 <p>En Java, ce qui se rapproche le plus d’une fonction d’ordre supérieur correspond à une fonction (méthode) qui prend une ou plusieurs expressions lambda comme paramètres et renvoie une autre expression lambda. Voici un exemple de fonction d’ordre supérieur en Java :</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java">	<span class="kd">public</span> <span class="kd">class</span> <span class="nc">HigherOrderFunctionClass</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java">	<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ClassOrdreSuperieur</span> <span class="o">{</span>
 		<span class="kd">public</span> <span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="nc">IFactory</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="nf">createFactory</span><span class="o">(</span><span class="nc">IProducer</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="n">producer</span><span class="o">,</span> <span class="nc">IConfigurator</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="n">configurator</span><span class="o">)</span> <span class="o">{</span>
 			<span class="k">return</span> <span class="o">()</span> <span class="o">-&gt;</span> <span class="o">{</span>
 				<span class="no">T</span> <span class="n">instance</span> <span class="o">=</span> <span class="n">producer</span><span class="o">.</span><span class="na">produce</span><span class="o">();</span>
@@ -190,17 +187,17 @@
 
 <p>Voici un exemple de fonction qui n’utilise aucun état extérieur :</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java">	<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Calculator</span> <span class="o">{</span>
-		<span class="kd">public</span> <span class="kt">int</span> <span class="nf">sum</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java">	<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Calculateur</span> <span class="o">{</span>
+		<span class="kd">public</span> <span class="kt">int</span> <span class="nf">somme</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
 			<span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="o">;</span>
 		<span class="o">}</span>
 	<span class="o">}</span></code></pre></figure>
 
 <p>Contrairement à ce dernier, voici un exemple de fonction qui se sert de l’état extérieur :</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java">	<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Calculator</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java">	<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Calculateur</span> <span class="o">{</span>
 		<span class="kd">private</span> <span class="kt">int</span> <span class="n">initVal</span> <span class="o">=</span> <span class="mi">5</span><span class="o">;</span>
-		<span class="kd">public</span> <span class="kt">int</span> <span class="nf">sum</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">)</span> <span class="o">{</span>
+		<span class="kd">public</span> <span class="kt">int</span> <span class="nf">somme</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">)</span> <span class="o">{</span>
 			<span class="k">return</span> <span class="n">initVal</span> <span class="o">+</span> <span class="n">a</span><span class="o">;</span>
 		<span class="o">}</span>
 	<span class="o">}</span></code></pre></figure>
@@ -223,30 +220,28 @@
 
 <p>Une autre alternative aux boucles est l’API Java Streams. Cette API est inspirée par les fonctions.</p>
 
-<h2 id="functional-interfaces">Functional Interfaces</h2>
+<h2 id="interface-fonctionnelle-functional-interfaces">Interface fonctionnelle (Functional Interfaces)</h2>
 
 <p>Une interface fonctionnelle en Java est une interface qui ne possède qu’une seule méthode abstraite. On entend par méthode abstraite une seule méthode qui n’est pas implémentée. Une interface peut avoir plusieurs méthodes, par exemple des méthodes par défaut et des méthodes statiques, toutes les deux avec des implémentations, mais tant que l’interface n’a qu’une seule méthode qui ne soit pas implémentée, l’interface est considérée comme fonctionnelle.</p>
 
 <p>Voici un exemple d’interface fonctionnelle :</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java">	<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">MyInterface</span> <span class="o">{</span>
-
+<figure class="highlight"><pre><code class="language-java" data-lang="java">	<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">MonInterface</span> <span class="o">{</span>
 		<span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">();</span>
-
 	<span class="o">}</span></code></pre></figure>
 
 <p>Voici un autre exemple d’interface fonctionnelle avec une méthode par défaut et une méthode statique :</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java">	<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">MyInterface2</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java">	<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">MonInterface2</span> <span class="o">{</span>
 	
 		<span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">();</span>
 		
 		<span class="kd">public</span> <span class="k">default</span> <span class="kt">void</span> <span class="nf">doIt</span><span class="o">()</span> <span class="o">{</span>
-			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"doing it"</span><span class="o">);</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"en réalisation"</span><span class="o">);</span>
 		<span class="o">}</span>
 		
 		<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">doItStatically</span><span class="o">()</span> <span class="o">{</span>
-			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"doing it statically"</span><span class="o">);</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"en réalisation statique"</span><span class="o">);</span>
 		<span class="o">}</span>
 	<span class="o">}</span></code></pre></figure>
 
