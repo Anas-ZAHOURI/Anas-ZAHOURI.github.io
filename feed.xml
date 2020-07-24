@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-07-24T23:38:37+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Anas ZAHOURI - Blog</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">programmation fonctionnelle en Java</title><link href="http://localhost:4000/java/fonctionnelle/2020/07/24/programmation-fonctionnelle-en-Java.html" rel="alternate" type="text/html" title="programmation fonctionnelle en Java" /><published>2020-07-24T19:18:25+02:00</published><updated>2020-07-24T19:18:25+02:00</updated><id>http://localhost:4000/java/fonctionnelle/2020/07/24/programmation-fonctionnelle-en-Java</id><content type="html" xml:base="http://localhost:4000/java/fonctionnelle/2020/07/24/programmation-fonctionnelle-en-Java.html">&lt;p&gt;La &lt;strong&gt;programmation fonctionnelle&lt;/strong&gt; en Java n’a pas été facile historiquement, et il y avait plusieurs aspects qui n’étaient pas possibles en Java.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-07-24T23:59:10+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Anas ZAHOURI - Blog</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Programmation fonctionnelle en Java</title><link href="http://localhost:4000/java/fonctionnelle/2020/07/24/programmation-fonctionnelle-en-Java.html" rel="alternate" type="text/html" title="Programmation fonctionnelle en Java" /><published>2020-07-24T19:18:25+02:00</published><updated>2020-07-24T19:18:25+02:00</updated><id>http://localhost:4000/java/fonctionnelle/2020/07/24/programmation-fonctionnelle-en-Java</id><content type="html" xml:base="http://localhost:4000/java/fonctionnelle/2020/07/24/programmation-fonctionnelle-en-Java.html">&lt;p&gt;Historiquement la &lt;strong&gt;programmation fonctionnelle&lt;/strong&gt; en Java n’a pas été facile, et il y avait plusieurs aspects qui n’étaient pas possibles avec Java.&lt;/p&gt;
 
 &lt;p&gt;Avec Java 8, Oracle a fait un effort pour faciliter la &lt;strong&gt;programmation fonctionnelle&lt;/strong&gt;, et cet effort a été couronné avec succès en quelque sorte. Dans ce tutoriel sur la &lt;strong&gt;programmation fonctionnelle&lt;/strong&gt; en Java, je vais passer en revue les bases et les possibilités qu’elle offre.&lt;/p&gt;
 
@@ -35,7 +35,7 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Ces concepts et règles seront expliqués tout au long du reste de ce tutoriel même si vous ne suivez pas toutes ces règles en permanence, vous pouvez toujours bénéficier des concepts de la programmation fonctionnelle dans vos applications. Comme vous le verrez, la programmation fonctionnelle n’est pas adaptée à tous les problèmes. En particulier, l’idée de “pas d’effets secondaires” rend difficile, par exemple, l’écriture dans une base de données (c’est un effet secondaire). Vous devez apprendre quels sont les problèmes que la programmation fonctionnelle peut résoudre, et ceux qu’elle ne peut pas résoudre.&lt;/p&gt;
+&lt;p&gt;Ces concepts et règles seront expliqués tout au long du reste de ce tutoriel même si vous ne suivez pas toutes ces règles en permanence, vous pouvez toujours bénéficier des concepts de la programmation fonctionnelle dans vos applications. Comme vous le verrez, la programmation fonctionnelle n’est pas adaptée à tous les problèmes. En particulier, l’idée de &lt;strong&gt;“pas d’effets secondaires”&lt;/strong&gt; rend difficile, par exemple, l’écriture dans une base de données (c’est un effet secondaire). Vous devez apprendre quels sont les problèmes que la programmation fonctionnelle peut résoudre, et ceux qu’elle ne peut pas résoudre.&lt;/p&gt;
 
 &lt;h2 id=&quot;fonction-de-première-classe&quot;&gt;Fonction de première classe&lt;/h2&gt;
 
@@ -45,7 +45,7 @@
 
 &lt;h2 id=&quot;fonctions-pures&quot;&gt;Fonctions pures&lt;/h2&gt;
 
-&lt;p&gt;Une fonction est une fonction pure si :&lt;/p&gt;
+&lt;p&gt;Une fonction est pure si :&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -64,23 +64,23 @@
 		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Notez que la valeur de retour de la fonction sum() ne dépend que des paramètres d’entrée. Remarquez également que la fonction sum() n’a pas d’effets secondaires, ce qui signifie qu’elle ne modifie aucun état (variable) en dehors de la fonction.&lt;/p&gt;
+&lt;p&gt;Notez que la valeur de retour de la fonction somme() ne dépend que des paramètres d’entrée. Remarquez également que la fonction somme() n’a pas d’effets secondaires, ce qui signifie qu’elle ne modifie aucun état (variable) en dehors de la fonction.&lt;/p&gt;
 
 &lt;p&gt;Contrairement à cela, voici un exemple de fonction non-pur :&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ObjetAvecFonctionNonPure&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
 		&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;valeur&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-		&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;autreValeur&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;somme&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;autreValeur&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
 			&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;valeur&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;autreValeur&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 			&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;valeur&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Remarquez comment la méthode add() utilise une variable membre pour calculer sa valeur de retour, et qu’elle modifie également l’état de la valeur de la variable membre, ce qui a un effet secondaire.&lt;/p&gt;
+&lt;p&gt;Remarquez comment la méthode somme() utilise une variable membre pour calculer sa valeur de retour, et qu’elle modifie également l’état de la valeur de la variable membre, ce qui est un effet secondaire.&lt;/p&gt;
 
 &lt;h2 id=&quot;fonction-dordre-supérieur-higher-order-functions&quot;&gt;Fonction d’ordre supérieur (Higher order functions)&lt;/h2&gt;
 
-&lt;p&gt;Une fonction est une fonction d’ordre supérieur si au moins L’une de ces conditions est remplie :&lt;/p&gt;
+&lt;p&gt;Une fonction est d’ordre supérieur si au moins L’une de ces conditions est remplie :&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -105,7 +105,7 @@
 
 &lt;p&gt;Remarquez comment la méthode createFactory() renvoie une expression lambda comme résultat. Ceci représente la première condition d’une fonction d’ordre supérieur.&lt;/p&gt;
 
-&lt;p&gt;Notez également que la méthode createFactory() prend comme paramètres deux instances qui sont toutes deux des implémentations des interfaces (IProducer et IConfigurator). En effet, les expressions lambda de Java devront implémenter une interface fonctionnelle, vous vous souvenez ?&lt;/p&gt;
+&lt;p&gt;Notez également que la méthode createFactory() prend comme paramètres deux instances qui sont toutes les deux des implémentations des interfaces (IProducer et IConfigurator). En effet, les expressions lambda de Java devront implémenter une interface fonctionnelle, vous vous souvenez ?&lt;/p&gt;
 
 &lt;p&gt;Imaginez les interfaces comme ceci :&lt;/p&gt;
 
@@ -156,7 +156,7 @@
 
 &lt;p&gt;Une troisième règle dans le paradigme de la programmation fonctionnelle est celle des variables immuables. Les variables immuables permettent d’éviter facilement les effets secondaires.&lt;/p&gt;
 
-&lt;p&gt;Favoriser la récursivité au lieu des boucles&lt;/p&gt;
+&lt;h2 id=&quot;favoriser-la-récursivité-au-lieu-des-boucles&quot;&gt;Favoriser la récursivité au lieu des boucles&lt;/h2&gt;
 
 &lt;p&gt;Une quatrième règle dans le paradigme de la programmation fonctionnelle est de favoriser la récursivité plutôt que les boucles. La récursivité utilise des appels de fonction pour effectuer des boucles, de manière à ce que le code devient fonctionnel.&lt;/p&gt;
 
@@ -185,4 +185,4 @@
 		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Notez les deux méthodes avec leurs implémentations. Il s’agit toujours d’une interface fonctionnelle, car seule run() n’est pas implémentée (abstraite). Cependant, s’il y avait davantage de méthodes sans implémentation, l’interface ne serait plus une interface fonctionnelle, et ne pourrait donc pas être implémentée par une expression lambda Java.&lt;/p&gt;</content><author><name></name></author><category term="JAVA" /><category term="FONCTIONNELLE" /><summary type="html">La programmation fonctionnelle en Java n’a pas été facile historiquement, et il y avait plusieurs aspects qui n’étaient pas possibles en Java.</summary></entry></feed>
+&lt;p&gt;Notez les deux méthodes avec leurs implémentations. Il s’agit toujours d’une interface fonctionnelle, car seule run() n’est pas implémentée (abstraite). Cependant, s’il y avait davantage de méthodes sans implémentation, l’interface ne serait plus une interface fonctionnelle, et ne pourrait donc pas être implémentée par une expression lambda Java.&lt;/p&gt;</content><author><name></name></author><category term="JAVA" /><category term="FONCTIONNELLE" /><summary type="html">Historiquement la programmation fonctionnelle en Java n’a pas été facile, et il y avait plusieurs aspects qui n’étaient pas possibles avec Java.</summary></entry></feed>
