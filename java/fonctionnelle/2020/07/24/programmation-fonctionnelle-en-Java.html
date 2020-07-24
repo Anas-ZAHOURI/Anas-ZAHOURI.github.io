@@ -12,15 +12,15 @@
 <meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Programmation fonctionnelle en Java" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Historiquement la programmation fonctionnelle en Java n’a pas été facile, et il y avait plusieurs aspects qui n’étaient pas possibles avec Java." />
-<meta property="og:description" content="Historiquement la programmation fonctionnelle en Java n’a pas été facile, et il y avait plusieurs aspects qui n’étaient pas possibles avec Java." />
+<meta name="description" content="Historiquement la programmation fonctionnelle en Java n’a pas été facile, et plusieurs aspects n’étaient pas possibles avec Java." />
+<meta property="og:description" content="Historiquement la programmation fonctionnelle en Java n’a pas été facile, et plusieurs aspects n’étaient pas possibles avec Java." />
 <link rel="canonical" href="http://localhost:4000/java/fonctionnelle/2020/07/24/programmation-fonctionnelle-en-Java.html" />
 <meta property="og:url" content="http://localhost:4000/java/fonctionnelle/2020/07/24/programmation-fonctionnelle-en-Java.html" />
 <meta property="og:site_name" content="Anas ZAHOURI - Blog" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-07-24T19:18:25+02:00" />
 <script type="application/ld+json">
-{"headline":"Programmation fonctionnelle en Java","dateModified":"2020-07-24T19:18:25+02:00","datePublished":"2020-07-24T19:18:25+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/java/fonctionnelle/2020/07/24/programmation-fonctionnelle-en-Java.html"},"url":"http://localhost:4000/java/fonctionnelle/2020/07/24/programmation-fonctionnelle-en-Java.html","description":"Historiquement la programmation fonctionnelle en Java n’a pas été facile, et il y avait plusieurs aspects qui n’étaient pas possibles avec Java.","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","url":"http://localhost:4000/java/fonctionnelle/2020/07/24/programmation-fonctionnelle-en-Java.html","headline":"Programmation fonctionnelle en Java","dateModified":"2020-07-24T19:18:25+02:00","datePublished":"2020-07-24T19:18:25+02:00","description":"Historiquement la programmation fonctionnelle en Java n’a pas été facile, et plusieurs aspects n’étaient pas possibles avec Java.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/java/fonctionnelle/2020/07/24/programmation-fonctionnelle-en-Java.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 </head>
 
@@ -54,9 +54,9 @@
   <div class="post-meta">
     <div class="post-date"><i class="icon-calendar"></i>Jul 24, 2020</div><ul class="post-categories"><li>JAVA</li><li>FONCTIONNELLE</li></ul></div>
   <div class="post">
-    <p>Historiquement la <strong>programmation fonctionnelle</strong> en Java n’a pas été facile, et il y avait plusieurs aspects qui n’étaient pas possibles avec Java.</p>
+    <p>Historiquement la <strong>programmation fonctionnelle</strong> en Java n’a pas été facile, et plusieurs aspects  n’étaient pas possibles avec Java.</p>
 
-<p>Avec Java 8, Oracle a fait un effort pour faciliter la <strong>programmation fonctionnelle</strong>, et cet effort a été couronné avec succès en quelque sorte. Dans ce tutoriel sur la <strong>programmation fonctionnelle</strong> en Java, je vais passer en revue les bases et les possibilités qu’elle offre.</p>
+<p>Avec Java 8 , Oracle a fait un effort pour faciliter la <strong>programmation fonctionnelle</strong>, cet effort était couronné avec succès en quelque sorte. Dans ce tutoriel sur la <strong>programmation fonctionnelle</strong> en Java, je vais passer en revue les bases et les possibilités qu’elle offre.</p>
 
 <h2 id="notions-de-la-programmation-fonctionnelle">Notions de la programmation fonctionnelle:</h2>
 
@@ -93,11 +93,11 @@
 
 <p>Ces concepts et règles seront expliqués tout au long du reste de ce tutoriel même si vous ne suivez pas toutes ces règles en permanence, vous pouvez toujours bénéficier des concepts de la programmation fonctionnelle dans vos applications. Comme vous le verrez, la programmation fonctionnelle n’est pas adaptée à tous les problèmes. En particulier, l’idée de <strong>“pas d’effets secondaires”</strong> rend difficile, par exemple, l’écriture dans une base de données (c’est un effet secondaire). Vous devez apprendre quels sont les problèmes que la programmation fonctionnelle peut résoudre, et ceux qu’elle ne peut pas résoudre.</p>
 
-<h2 id="fonction-de-première-classe">Fonction de première classe</h2>
+<h2 id="fonction-de-première-classe-functions-as-first-class-objects">Fonction de première classe (Functions as first class objects)</h2>
 
 <p>Le paradigme de la programmation fonctionnelle considère les fonctions comme des objets de première classe dans le langage. Cela signifie que vous pouvez créer une “instance” d’une fonction, tout comme une référence variable vers cette instance de la fonction, tout comme une référence à une chaîne de caractères ou tout autre objet. Les fonctions peuvent également être passées comme paramètre à d’autres fonctions.</p>
 
-<p>En Java, les méthodes se distinguent des objets classiques. Ce qui s’en rapproche le plus, ce sont les expressions lambda de Java. Je ne traiterai pas ici les expressions lambda enJava.</p>
+<p>En Java, les méthodes se distinguent des objets classiques. Ce qui s’en rapproche le plus, ce sont les expressions lambda de Java. <strong>(Je ne traiterai pas ici les expressions lambda en Java.)</strong></p>
 
 <h2 id="fonctions-pures">Fonctions pures</h2>
 
@@ -120,9 +120,9 @@
 		<span class="o">}</span>
 	<span class="o">}</span></code></pre></figure>
 
-<p>Notez que la valeur de retour de la fonction somme() ne dépend que des paramètres d’entrée. Remarquez également que la fonction somme() n’a pas d’effets secondaires, ce qui signifie qu’elle ne modifie aucun état (variable) en dehors de la fonction.</p>
+<p>Notez que la valeur de retour de la fonction <strong>somme()</strong> ne dépend que des paramètres d’entrée. Remarquez également que la fonction <strong>somme()</strong> n’a pas d’effets secondaires, ce qui signifie qu’elle ne modifie aucun état (variable) en dehors de la fonction.</p>
 
-<p>Contrairement à cela, voici un exemple de fonction non-pur :</p>
+<p>Contrairement à cela, voici un exemple de fonction non-pure :</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java">	<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ObjetAvecFonctionNonPure</span><span class="o">{</span>
 		<span class="kd">private</span> <span class="kt">int</span> <span class="n">valeur</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
@@ -132,7 +132,7 @@
 		<span class="o">}</span>
 	<span class="o">}</span></code></pre></figure>
 
-<p>Remarquez comment la méthode somme() utilise une variable membre pour calculer sa valeur de retour, et qu’elle modifie également l’état de la valeur de la variable membre, ce qui est un effet secondaire.</p>
+<p>Remarquez comment la méthode <strong>somme()</strong> utilise une variable membre à la <strong>class</strong> pour calculer sa valeur de retour, et qu’elle modifie également l’état de la valeur de la variable membre, ce qui est un effet secondaire.</p>
 
 <h2 id="fonction-dordre-supérieur-higher-order-functions">Fonction d’ordre supérieur (Higher order functions)</h2>
 
@@ -147,7 +147,7 @@
   </li>
 </ul>
 
-<p>En Java, ce qui se rapproche le plus d’une fonction d’ordre supérieur correspond à une fonction (méthode) qui prend une ou plusieurs expressions lambda comme paramètres et renvoie une autre expression lambda. Voici un exemple de fonction d’ordre supérieur en Java :</p>
+<p>En Java, ce qui se rapproche le plus d’une fonction d’ordre supérieur correspond à une fonction/méthode qui prend une ou plusieurs <strong>expressions lambda</strong> comme paramètres et renvoie une autre expression lambda. Voici un exemple de fonction d’ordre supérieur en Java :</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java">	<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ClassOrdreSuperieur</span> <span class="o">{</span>
 		<span class="kd">public</span> <span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="nc">IFactory</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="nf">createFactory</span><span class="o">(</span><span class="nc">IProducer</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="n">producer</span><span class="o">,</span> <span class="nc">IConfigurator</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="n">configurator</span><span class="o">)</span> <span class="o">{</span>
@@ -159,9 +159,9 @@
 		<span class="o">}</span>
 	<span class="o">}</span></code></pre></figure>
 
-<p>Remarquez comment la méthode createFactory() renvoie une expression lambda comme résultat. Ceci représente la première condition d’une fonction d’ordre supérieur.</p>
+<p>Remarquez comment la méthode <strong>createFactory()</strong> renvoie une expression lambda comme résultat. Ceci représente la première condition d’une fonction d’ordre supérieur.</p>
 
-<p>Notez également que la méthode createFactory() prend comme paramètres deux instances qui sont toutes les deux des implémentations des interfaces (IProducer et IConfigurator). En effet, les expressions lambda de Java devront implémenter une interface fonctionnelle, vous vous souvenez ?</p>
+<p>Notez également que la méthode <strong>createFactory()</strong> prend comme paramètres deux instances qui sont toutes les deux des implémentations des interfaces <strong>(IProducer et IConfigurator)</strong>. En effet, les expressions lambda de Java devront implémenter une interface fonctionnelle, vous vous souvenez ?</p>
 
 <p>Imaginez les interfaces comme ceci :</p>
 
@@ -175,13 +175,13 @@
 		<span class="kt">void</span> <span class="nf">configure</span><span class="o">(</span><span class="no">T</span> <span class="n">t</span><span class="o">);</span>
 	<span class="o">}</span></code></pre></figure>
 
-<p>Comme vous le voyez, toutes ces interfaces sont de nature fonctionnelle. Elles peuvent donc être implémentées par des expressions lambda Java - et la méthode createFactory() est par conséquent une fonction d’ordre supérieur.</p>
+<p>Comme vous le voyez, toutes ces interfaces sont de nature fonctionnelle, elles peuvent donc être implémentées par des expressions lambda Java - et la méthode <strong>createFactory()</strong> est par conséquent une fonction d’ordre supérieur.</p>
 
 <p>Les fonctions d’ordre supérieur sont traitées avec des exemples différents dans la section sur les Fonctions d’ordre supérieur.</p>
 
 <h2 id="pas-détat-no-state">Pas d’État (No State)</h2>
 
-<p>Comme mentionné précédemment, le paradigme de la programmation fonctionnelle a pour principe de ne pas avoir d’état. Par “pas d’état”, cela signifie généralement qu’il n’y a pas d’état extérieur à la fonction. Une fonction peut avoir des variables locales contenant un état temporaire en interne, en revanche la fonction ne peut pas faire référence aux variables membres de la classe ou de l’objet dont elle fait partie.</p>
+<p>Comme mentionné précédemment, le paradigme de la programmation fonctionnelle a pour principe ne pas avoir d’état. “Pas d’état”, signifie généralement qu’il n’y a pas d’état extérieur à la fonction. Une fonction peut avoir des variables locales contenants un état temporaire en interne, en revanche la fonction ne peut pas faire référence aux variables membres de la classe ou de l’objet dont elle fait partie.</p>
 
 <p>Voici un exemple de fonction qui n’utilise aucun état extérieur :</p>
 
@@ -200,13 +200,13 @@
 		<span class="o">}</span>
 	<span class="o">}</span></code></pre></figure>
 
-<p>Cette fonction ne respecte pas la règle du “ Pas d’Etat “.</p>
+<p>Cette fonction ne respecte pas la règle du “Pas d’Etat”.</p>
 
 <h2 id="pas-deffets-secondaires--no-side-effects">Pas d’effets secondaires ( No Side Effects)</h2>
 
-<p>Une autre règle dans le paradigme de la programmation fonctionnelle est l’absence d’effets secondaires. Cela signifie qu’une fonction ne peut changer aucun état en dehors de la fonction. Le changement d’état en dehors d’une fonction est appelé un effet secondaire.</p>
+<p>Une autre règle dans le paradigme de la programmation fonctionnelle est l’absence d’effets secondaires. Cela signifie qu’une fonction ne peut changer aucun état en dehors d’elle même. Le changement d’état en dehors d’une fonction est appelé un effet secondaire.</p>
 
-<p>L’état qui se trouve en dehors d’une fonction désigne à la fois les variables membres de la classe ou de l’objet correspondant à la fonction, et les variables propres aux paramètres des fonctions, ou l’état dans des systèmes externes comme les systèmes de fichiers ou les bases de données.</p>
+<p>L’état qui se trouve en dehors d’une fonction désigne à la fois les variables membres de la classe ou de l’objet correspondant à la fonction et les variables propres aux paramètres des fonctions ou l’état dans des systèmes externes comme les systèmes de fichiers ou les bases de données.</p>
 
 <h2 id="variables-immuables-immutable-variables">Variables immuables (Immutable variables)</h2>
 
@@ -216,11 +216,11 @@
 
 <p>Une quatrième règle dans le paradigme de la programmation fonctionnelle est de favoriser la récursivité plutôt que les boucles. La récursivité utilise des appels de fonction pour effectuer des boucles, de manière à ce que le code devient fonctionnel.</p>
 
-<p>Une autre alternative aux boucles est l’API Java Streams. Cette API est inspirée par les fonctions.</p>
+<p>Une autre alternative aux boucles est l’API Java Streams. Cette API est faite par les fonctions.</p>
 
 <h2 id="interface-fonctionnelle-functional-interfaces">Interface fonctionnelle (Functional Interfaces)</h2>
 
-<p>Une interface fonctionnelle en Java est une interface qui ne possède qu’une seule méthode abstraite. On entend par méthode abstraite une seule méthode qui n’est pas implémentée. Une interface peut avoir plusieurs méthodes, par exemple des méthodes par défaut et des méthodes statiques, toutes les deux avec des implémentations, mais tant que l’interface n’a qu’une seule méthode qui ne soit pas implémentée, l’interface est considérée comme fonctionnelle.</p>
+<p>Une interface fonctionnelle en Java est une interface qui ne possède qu’une seule méthode abstraite. On entend par méthode abstraite une seule méthode qui n’est pas implémentée. Une interface peut avoir plusieurs méthodes, par exemple des méthodes par défaut et/ou des méthodes statiques, toutes les deux avec des implémentations mais tant que l’interface n’a qu’une seule méthode qui ne soit pas implémentée, l’interface est considérée comme fonctionnelle.</p>
 
 <p>Voici un exemple d’interface fonctionnelle :</p>
 
@@ -241,7 +241,7 @@
 		<span class="o">}</span>
 	<span class="o">}</span></code></pre></figure>
 
-<p>Notez les deux méthodes avec leurs implémentations. Il s’agit toujours d’une interface fonctionnelle, car seule run() n’est pas implémentée (abstraite). Cependant, s’il y avait davantage de méthodes sans implémentation, l’interface ne serait plus une interface fonctionnelle, et ne pourrait donc pas être implémentée par une expression lambda Java.</p>
+<p>Notez les deux méthodes avec leurs implémentations. Il s’agit toujours d’une interface fonctionnelle car seule run() n’est pas implémentée (abstraite). Cependant, s’il y avait davantage de méthodes sans implémentation, l’interface ne serait plus une interface fonctionnelle et ne pourrait donc pas être implémentée par une expression lambda Java.</p>
 
   </div></div>
 
