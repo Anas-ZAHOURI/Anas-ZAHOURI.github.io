@@ -155,7 +155,6 @@
 				<span class="no">T</span> <span class="n">instance</span> <span class="o">=</span> <span class="n">producer</span><span class="o">.</span><span class="na">produce</span><span class="o">();</span>
 				<span class="n">configurator</span><span class="o">.</span><span class="na">configure</span><span class="o">(</span><span class="n">instance</span><span class="o">);</span>
 				<span class="k">return</span> <span class="n">instance</span><span class="o">;</span>
-
 			<span class="o">}</span>
 		<span class="o">}</span>
 	<span class="o">}</span></code></pre></figure>
@@ -172,7 +171,6 @@
 	<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">IProducer</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="o">{</span>
 		<span class="no">T</span> <span class="nf">produce</span><span class="o">();</span>
 	<span class="o">}</span>
-
 	<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">IConfigurator</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="o">{</span>
 		<span class="kt">void</span> <span class="nf">configure</span><span class="o">(</span><span class="no">T</span> <span class="n">t</span><span class="o">);</span>
 	<span class="o">}</span></code></pre></figure>
@@ -235,11 +233,9 @@
 <figure class="highlight"><pre><code class="language-java" data-lang="java">	<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">MonInterface2</span> <span class="o">{</span>
 	
 		<span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">();</span>
-		
 		<span class="kd">public</span> <span class="k">default</span> <span class="kt">void</span> <span class="nf">doIt</span><span class="o">()</span> <span class="o">{</span>
 			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"en réalisation"</span><span class="o">);</span>
 		<span class="o">}</span>
-		
 		<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">doItStatically</span><span class="o">()</span> <span class="o">{</span>
 			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"en réalisation statique"</span><span class="o">);</span>
 		<span class="o">}</span>
