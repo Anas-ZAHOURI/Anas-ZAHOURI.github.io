@@ -20,7 +20,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-07-24T19:18:25+02:00" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","headline":"Programmation fonctionnelle en Java","url":"http://localhost:4000/java/fonctionnelle/2020/07/24/programmation-fonctionnelle-en-Java.html","dateModified":"2020-07-24T19:18:25+02:00","datePublished":"2020-07-24T19:18:25+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/java/fonctionnelle/2020/07/24/programmation-fonctionnelle-en-Java.html"},"description":"Si vous souhaitez démystifier la programmation fonctionnelle et comprendre pourquoi et comment commencer à utiliser ce paradigme en JAVA, lisez cet article.","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","headline":"Programmation fonctionnelle en Java","dateModified":"2020-07-24T19:18:25+02:00","datePublished":"2020-07-24T19:18:25+02:00","url":"http://localhost:4000/java/fonctionnelle/2020/07/24/programmation-fonctionnelle-en-Java.html","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/java/fonctionnelle/2020/07/24/programmation-fonctionnelle-en-Java.html"},"description":"Si vous souhaitez démystifier la programmation fonctionnelle et comprendre pourquoi et comment commencer à utiliser ce paradigme en JAVA, lisez cet article.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 </head>
 
@@ -63,32 +63,18 @@
   <div class="post-meta">
     <div class="post-date"><i class="icon-calendar"></i>Jul 24, 2020</div><ul class="post-categories"><li>JAVA</li><li>FONCTIONNELLE</li></ul></div>
   <div class="post">
-    <blockquote>
-  <p>Si vous souhaitez démystifier la programmation fonctionnelle et comprendre pourquoi et comment commencer à utiliser ce paradigme en JAVA, lisez cet article.</p>
-</blockquote>
+    <p>Si vous souhaitez démystifier la programmation fonctionnelle et comprendre pourquoi et comment commencer à utiliser ce paradigme en JAVA, lisez cet article.</p>
 
 <h2 id="pourquoi-devrions-nous-utiliser-les-paradigmes-de-la-pf-dans-un-langage-oo-comme-le-java-">Pourquoi devrions-nous utiliser les paradigmes de la PF dans un langage OO comme le JAVA ?</h2>
 
 <p>Voici quelques arguments pour répondre à cette question (de mon point de vue) :</p>
 
 <ul>
-  <li>
-    <p>Écrivez moins de code et plus significatif : une meilleure lisibilité
-du code.</p>
-  </li>
-  <li>
-    <p>Éviter les effets secondaires en utilisant l’immuabilité et les
-fonctions pures : Programmation concurrentielle plus facile.</p>
-  </li>
-  <li>
-    <p>Des tests plus faciles : il est très facile de tester les fonctions.</p>
-  </li>
-  <li>
-    <p>Débogage plus simple.</p>
-  </li>
-  <li>
-    <p>Amusant à écrire.</p>
-  </li>
+  <li>Écrivez moins de code et plus significatif : une meilleure lisibilité du code.</li>
+  <li>Éviter les effets secondaires en utilisant l’immuabilité et les fonctions pures : Programmation concurrentielle plus facile.</li>
+  <li>Des tests plus faciles : il est très facile de tester les fonctions.</li>
+  <li>Débogage plus simple.</li>
+  <li>Amusant à écrire.</li>
 </ul>
 
 <p><img src="/img/PROGRAMING_EVOLUTION.png" /></p>
@@ -117,7 +103,7 @@ Comme le changement d’état et la mutation des données ne peuvent pas être r
 <ul>
   <li><strong>Fonction de première classe (Functions as first class objects)</strong></li>
   <li><strong>Fonctions pures (Pure functions)</strong></li>
-  <li><strong>Fonction d’ordre supérieur (Higher order functions)</strong></li>
+  <li><strong><a href="https://anas-zahouri.github.io/java/fonctionnelle/2020/07/25/Fonction-d-ordre-superieur.html" title="Fonction d'ordre supérieur (Higher order functions)">Fonction d’ordre supérieur (Higher order functions)</a></strong></li>
 </ul>
 
 <p>La programmation purement fonctionnelle a également un ensemble de règles à suivre :</p>
@@ -170,9 +156,9 @@ Comme le changement d’état et la mutation des données ne peuvent pas être r
 
 <p>Remarquez comment la méthode <strong>somme()</strong> utilise une variable membre à la <strong>class</strong> pour calculer sa valeur de retour, et qu’elle modifie également l’état de la valeur de la variable membre, ce qui est un effet secondaire.</p>
 
-<h2 id="fonction-dordre-supérieur-higher-order-functions">Fonction d’ordre supérieur (Higher order functions)</h2>
+<h2 id="fonction-dordre-supérieur-higher-order-functions"><a href="https://anas-zahouri.github.io/java/fonctionnelle/2020/07/25/Fonction-d-ordre-superieur.html" title="Fonction d'ordre supérieur (Higher order functions)">Fonction d’ordre supérieur (Higher order functions)</a></h2>
 
-<p>Une fonction est d’ordre supérieur si au moins L’une de ces conditions est remplie :</p>
+<p>Une <a href="https://anas-zahouri.github.io/java/fonctionnelle/2020/07/25/Fonction-d-ordre-superieur.html" title="fonction est d'ordre supérieur">fonction est d’ordre supérieur</a> si au moins L’une de ces conditions est remplie :</p>
 
 <ul>
   <li>La fonction prend une ou plusieurs fonctions comme paramètres.</li>
@@ -192,7 +178,7 @@ Comme le changement d’état et la mutation des données ne peuvent pas être r
 	<span class="o">}</span>
 </code></pre></div></div>
 
-<p>Remarquez comment la méthode <strong>createFactory()</strong> renvoie une expression lambda comme résultat. Ceci représente la première condition d’une fonction d’ordre supérieur.</p>
+<p>Remarquez comment la méthode <strong>createFactory()</strong> renvoie une expression lambda comme résultat. Ceci représente la première condition d’une <a href="https://anas-zahouri.github.io/java/fonctionnelle/2020/07/25/Fonction-d-ordre-superieur.html" title="fonction d'ordre supérieur">fonction d’ordre supérieur</a>.</p>
 
 <p>Notez également que la méthode <strong>createFactory()</strong> prend comme paramètres deux instances qui sont toutes les deux des implémentations des interfaces <strong>(IProducer et IConfigurator)</strong>. En effet, les expressions lambda de Java devront implémenter une interface fonctionnelle, vous vous souvenez ?</p>
 
@@ -209,9 +195,9 @@ Comme le changement d’état et la mutation des données ne peuvent pas être r
 	<span class="o">}</span>
 </code></pre></div></div>
 
-<p>Comme vous le voyez, toutes ces interfaces sont de nature fonctionnelle, elles peuvent donc être implémentées par des expressions lambda Java - et la méthode <strong>createFactory()</strong> est par conséquent une fonction d’ordre supérieur.</p>
+<p>Comme vous le voyez, toutes ces interfaces sont de nature fonctionnelle, elles peuvent donc être implémentées par des expressions lambda Java - et la méthode <strong>createFactory()</strong> est par conséquent une <a href="https://anas-zahouri.github.io/java/fonctionnelle/2020/07/25/Fonction-d-ordre-superieur.html" title="fonction d'ordre supérieur">fonction d’ordre supérieur</a>.</p>
 
-<p>Les fonctions d’ordre supérieur sont traitées avec des exemples différents dans la section sur les Fonctions d’ordre supérieur.</p>
+<p>Les fonctions d’ordre supérieur sont traitées avec des exemples différents dans la section sur <a href="https://anas-zahouri.github.io/java/fonctionnelle/2020/07/25/Fonction-d-ordre-superieur.html" title="les Fonctions d'ordre supérieur">les Fonctions d’ordre supérieur</a>.</p>
 
 <h2 id="pas-détat-no-state">Pas d’État (No State)</h2>
 

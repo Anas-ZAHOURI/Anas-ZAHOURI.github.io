@@ -1,4 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-07-25T16:22:58+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Anas ZAHOURI - Blog</title><subtitle>Hi, I’m Anas Zahouri. Java ninja, morning samurai, noon rock star, and night guru. I write #code. Titles are irrelevant. Interested in hiring my services? Please contact me by email &quot;zahouri.anas@gmail.com&quot;. I'm happy to hear from you! </subtitle><entry><title type="html">Fonction d’ordre supérieur (Higher order functions)</title><link href="http://localhost:4000/java/fonctionnelle/2020/07/25/Fonction-d-ordre-superieur.html" rel="alternate" type="text/html" title="Fonction d’ordre supérieur (Higher order functions)" /><published>2020-07-25T12:18:25+02:00</published><updated>2020-07-25T12:18:25+02:00</updated><id>http://localhost:4000/java/fonctionnelle/2020/07/25/Fonction-d-ordre-superieur</id><content type="html" xml:base="http://localhost:4000/java/fonctionnelle/2020/07/25/Fonction-d-ordre-superieur.html">&lt;p&gt;Une &lt;strong&gt;fonction d’ordre supérieur&lt;/strong&gt; est une fonction qui soit prend en paramètre une autre fonction (méthode), soit retourne une fonction après son exécution. Dans ce tutoriel sur les fonctions d’ordre supérieur, je montrerai quelques exemples de fonctions d’ordre supérieur en Java.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-07-25T16:36:08+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Anas ZAHOURI - Blog</title><subtitle>Hi, I’m Anas Zahouri. Java ninja, morning samurai, noon rock star, and night guru. I write #code. Titles are irrelevant. Interested in hiring my services? Please contact me by email &quot;zahouri.anas@gmail.com&quot;. I'm happy to hear from you! </subtitle><entry><title type="html">Fonction d’ordre supérieur (Higher order functions)</title><link href="http://localhost:4000/java/fonctionnelle/2020/07/25/Fonction-d-ordre-superieur.html" rel="alternate" type="text/html" title="Fonction d’ordre supérieur (Higher order functions)" /><published>2020-07-25T12:18:25+02:00</published><updated>2020-07-25T12:18:25+02:00</updated><id>http://localhost:4000/java/fonctionnelle/2020/07/25/Fonction-d-ordre-superieur</id><content type="html" xml:base="http://localhost:4000/java/fonctionnelle/2020/07/25/Fonction-d-ordre-superieur.html">&lt;p&gt;En mathématiques et en informatique, les &lt;strong&gt;fonctions d’ordre supérieur ou fonctionnelles&lt;/strong&gt; sont des fonctions qui ont au moins une des propriétés suivantes :&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;elles prennent une ou plusieurs fonctions en entrée ;&lt;/li&gt;
+  &lt;li&gt;elles renvoient une fonction.
+— &lt;a href=&quot;https://fr.wikipedia.org/wiki/Programmation_fonctionnelle&quot; title=&quot;wikipedia&quot;&gt;wikipedia&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Dans ce tutoriel sur les fonctions d’ordre supérieur, je montrerai quelques exemples de fonctions d’ordre supérieur en Java.&lt;/p&gt;
 
 &lt;h2 id=&quot;tri-des-collections&quot;&gt;Tri des collections&lt;/h2&gt;
 
@@ -15,7 +22,7 @@
 	&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Le &lt;strong&gt;Collection.sort()&lt;/strong&gt; prend deux paramètres. Le premier paramètre est une liste et le second paramètre est une** expression lambda (fonction)&lt;strong&gt;. Le paramètre lambda ici est celui qui fait de la **Collections.sort()&lt;/strong&gt; une fonction d’ordre supérieur.&lt;/p&gt;
+&lt;p&gt;Le &lt;strong&gt;Collection.sort()&lt;/strong&gt; prend deux paramètres. Le premier paramètre est une liste et le second paramètre est une &lt;strong&gt;expression lambda (fonction)&lt;/strong&gt;. Le paramètre lambda ici est celui qui fait de la &lt;strong&gt;Collections.sort()&lt;/strong&gt; une fonction d’ordre supérieur.&lt;/p&gt;
 
 &lt;h2 id=&quot;tri-par-ordre-inversé&quot;&gt;Tri par ordre inversé&lt;/h2&gt;
 
@@ -39,32 +46,18 @@
 
 &lt;p&gt;Comme la méthode &lt;strong&gt;reversed()&lt;/strong&gt; renvoie une &lt;strong&gt;lambda (fonction)&lt;/strong&gt;, la méthode &lt;strong&gt;reversed()&lt;/strong&gt; est considérée comme une fonction d’ordre supérieur.&lt;/p&gt;
 
-&lt;p&gt;Troisièmement, l’exemple trie la liste des chaînes de caractères à l’aide de la méthode &lt;strong&gt;Collections.sort()&lt;/strong&gt;.&lt;/p&gt;</content><author><name></name></author><category term="JAVA" /><category term="FONCTIONNELLE" /><summary type="html">Une fonction d’ordre supérieur est une fonction qui soit prend en paramètre une autre fonction (méthode), soit retourne une fonction après son exécution. Dans ce tutoriel sur les fonctions d’ordre supérieur, je montrerai quelques exemples de fonctions d’ordre supérieur en Java.</summary></entry><entry><title type="html">Programmation fonctionnelle en Java</title><link href="http://localhost:4000/java/fonctionnelle/2020/07/24/programmation-fonctionnelle-en-Java.html" rel="alternate" type="text/html" title="Programmation fonctionnelle en Java" /><published>2020-07-24T19:18:25+02:00</published><updated>2020-07-24T19:18:25+02:00</updated><id>http://localhost:4000/java/fonctionnelle/2020/07/24/programmation-fonctionnelle-en-Java</id><content type="html" xml:base="http://localhost:4000/java/fonctionnelle/2020/07/24/programmation-fonctionnelle-en-Java.html">&lt;blockquote&gt;
-  &lt;p&gt;Si vous souhaitez démystifier la programmation fonctionnelle et comprendre pourquoi et comment commencer à utiliser ce paradigme en JAVA, lisez cet article.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Troisièmement, l’exemple trie la liste des chaînes de caractères à l’aide de la méthode &lt;strong&gt;Collections.sort()&lt;/strong&gt;.&lt;/p&gt;</content><author><name></name></author><category term="JAVA" /><category term="FONCTIONNELLE" /><summary type="html">En mathématiques et en informatique, les fonctions d’ordre supérieur ou fonctionnelles sont des fonctions qui ont au moins une des propriétés suivantes : elles prennent une ou plusieurs fonctions en entrée ; elles renvoient une fonction. — wikipedia</summary></entry><entry><title type="html">Programmation fonctionnelle en Java</title><link href="http://localhost:4000/java/fonctionnelle/2020/07/24/programmation-fonctionnelle-en-Java.html" rel="alternate" type="text/html" title="Programmation fonctionnelle en Java" /><published>2020-07-24T19:18:25+02:00</published><updated>2020-07-24T19:18:25+02:00</updated><id>http://localhost:4000/java/fonctionnelle/2020/07/24/programmation-fonctionnelle-en-Java</id><content type="html" xml:base="http://localhost:4000/java/fonctionnelle/2020/07/24/programmation-fonctionnelle-en-Java.html">&lt;p&gt;Si vous souhaitez démystifier la programmation fonctionnelle et comprendre pourquoi et comment commencer à utiliser ce paradigme en JAVA, lisez cet article.&lt;/p&gt;
 
 &lt;h2 id=&quot;pourquoi-devrions-nous-utiliser-les-paradigmes-de-la-pf-dans-un-langage-oo-comme-le-java-&quot;&gt;Pourquoi devrions-nous utiliser les paradigmes de la PF dans un langage OO comme le JAVA ?&lt;/h2&gt;
 
 &lt;p&gt;Voici quelques arguments pour répondre à cette question (de mon point de vue) :&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Écrivez moins de code et plus significatif : une meilleure lisibilité
-du code.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Éviter les effets secondaires en utilisant l’immuabilité et les
-fonctions pures : Programmation concurrentielle plus facile.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Des tests plus faciles : il est très facile de tester les fonctions.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Débogage plus simple.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Amusant à écrire.&lt;/p&gt;
-  &lt;/li&gt;
+  &lt;li&gt;Écrivez moins de code et plus significatif : une meilleure lisibilité du code.&lt;/li&gt;
+  &lt;li&gt;Éviter les effets secondaires en utilisant l’immuabilité et les fonctions pures : Programmation concurrentielle plus facile.&lt;/li&gt;
+  &lt;li&gt;Des tests plus faciles : il est très facile de tester les fonctions.&lt;/li&gt;
+  &lt;li&gt;Débogage plus simple.&lt;/li&gt;
+  &lt;li&gt;Amusant à écrire.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;img src=&quot;/img/PROGRAMING_EVOLUTION.png&quot; /&gt;&lt;/p&gt;
@@ -93,7 +86,7 @@ Comme le changement d’état et la mutation des données ne peuvent pas être r
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;Fonction de première classe (Functions as first class objects)&lt;/strong&gt;&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Fonctions pures (Pure functions)&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Fonction d’ordre supérieur (Higher order functions)&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://anas-zahouri.github.io/java/fonctionnelle/2020/07/25/Fonction-d-ordre-superieur.html&quot; title=&quot;Fonction d'ordre supérieur (Higher order functions)&quot;&gt;Fonction d’ordre supérieur (Higher order functions)&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;La programmation purement fonctionnelle a également un ensemble de règles à suivre :&lt;/p&gt;
@@ -146,9 +139,9 @@ Comme le changement d’état et la mutation des données ne peuvent pas être r
 
 &lt;p&gt;Remarquez comment la méthode &lt;strong&gt;somme()&lt;/strong&gt; utilise une variable membre à la &lt;strong&gt;class&lt;/strong&gt; pour calculer sa valeur de retour, et qu’elle modifie également l’état de la valeur de la variable membre, ce qui est un effet secondaire.&lt;/p&gt;
 
-&lt;h2 id=&quot;fonction-dordre-supérieur-higher-order-functions&quot;&gt;Fonction d’ordre supérieur (Higher order functions)&lt;/h2&gt;
+&lt;h2 id=&quot;fonction-dordre-supérieur-higher-order-functions&quot;&gt;&lt;a href=&quot;https://anas-zahouri.github.io/java/fonctionnelle/2020/07/25/Fonction-d-ordre-superieur.html&quot; title=&quot;Fonction d'ordre supérieur (Higher order functions)&quot;&gt;Fonction d’ordre supérieur (Higher order functions)&lt;/a&gt;&lt;/h2&gt;
 
-&lt;p&gt;Une fonction est d’ordre supérieur si au moins L’une de ces conditions est remplie :&lt;/p&gt;
+&lt;p&gt;Une &lt;a href=&quot;https://anas-zahouri.github.io/java/fonctionnelle/2020/07/25/Fonction-d-ordre-superieur.html&quot; title=&quot;fonction est d'ordre supérieur&quot;&gt;fonction est d’ordre supérieur&lt;/a&gt; si au moins L’une de ces conditions est remplie :&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;La fonction prend une ou plusieurs fonctions comme paramètres.&lt;/li&gt;
@@ -168,7 +161,7 @@ Comme le changement d’état et la mutation des données ne peuvent pas être r
 	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Remarquez comment la méthode &lt;strong&gt;createFactory()&lt;/strong&gt; renvoie une expression lambda comme résultat. Ceci représente la première condition d’une fonction d’ordre supérieur.&lt;/p&gt;
+&lt;p&gt;Remarquez comment la méthode &lt;strong&gt;createFactory()&lt;/strong&gt; renvoie une expression lambda comme résultat. Ceci représente la première condition d’une &lt;a href=&quot;https://anas-zahouri.github.io/java/fonctionnelle/2020/07/25/Fonction-d-ordre-superieur.html&quot; title=&quot;fonction d'ordre supérieur&quot;&gt;fonction d’ordre supérieur&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Notez également que la méthode &lt;strong&gt;createFactory()&lt;/strong&gt; prend comme paramètres deux instances qui sont toutes les deux des implémentations des interfaces &lt;strong&gt;(IProducer et IConfigurator)&lt;/strong&gt;. En effet, les expressions lambda de Java devront implémenter une interface fonctionnelle, vous vous souvenez ?&lt;/p&gt;
 
@@ -185,9 +178,9 @@ Comme le changement d’état et la mutation des données ne peuvent pas être r
 	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Comme vous le voyez, toutes ces interfaces sont de nature fonctionnelle, elles peuvent donc être implémentées par des expressions lambda Java - et la méthode &lt;strong&gt;createFactory()&lt;/strong&gt; est par conséquent une fonction d’ordre supérieur.&lt;/p&gt;
+&lt;p&gt;Comme vous le voyez, toutes ces interfaces sont de nature fonctionnelle, elles peuvent donc être implémentées par des expressions lambda Java - et la méthode &lt;strong&gt;createFactory()&lt;/strong&gt; est par conséquent une &lt;a href=&quot;https://anas-zahouri.github.io/java/fonctionnelle/2020/07/25/Fonction-d-ordre-superieur.html&quot; title=&quot;fonction d'ordre supérieur&quot;&gt;fonction d’ordre supérieur&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Les fonctions d’ordre supérieur sont traitées avec des exemples différents dans la section sur les Fonctions d’ordre supérieur.&lt;/p&gt;
+&lt;p&gt;Les fonctions d’ordre supérieur sont traitées avec des exemples différents dans la section sur &lt;a href=&quot;https://anas-zahouri.github.io/java/fonctionnelle/2020/07/25/Fonction-d-ordre-superieur.html&quot; title=&quot;les Fonctions d'ordre supérieur&quot;&gt;les Fonctions d’ordre supérieur&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;pas-détat-no-state&quot;&gt;Pas d’État (No State)&lt;/h2&gt;
 
