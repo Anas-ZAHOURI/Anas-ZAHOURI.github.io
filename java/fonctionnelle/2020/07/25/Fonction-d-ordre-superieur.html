@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300|Raleway:400,700" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<title>Fonction d'ordre supérieur (Higher order functions)</title>
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Fonction d’ordre supérieur (Higher order functions) | Anas ZAHOURI - Blog</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Fonction d’ordre supérieur (Higher order functions)" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Une fonction d’ordre supérieur est une fonction qui soit prend en paramètre une autre fonction (méthode), soit retourne une fonction après son exécution. Dans ce tutoriel sur les fonctions d’ordre supérieur, je montrerai quelques exemples de fonctions d’ordre supérieur en Java." />
+<meta property="og:description" content="Une fonction d’ordre supérieur est une fonction qui soit prend en paramètre une autre fonction (méthode), soit retourne une fonction après son exécution. Dans ce tutoriel sur les fonctions d’ordre supérieur, je montrerai quelques exemples de fonctions d’ordre supérieur en Java." />
+<link rel="canonical" href="http://localhost:4000/java/fonctionnelle/2020/07/25/Fonction-d-ordre-superieur.html" />
+<meta property="og:url" content="http://localhost:4000/java/fonctionnelle/2020/07/25/Fonction-d-ordre-superieur.html" />
+<meta property="og:site_name" content="Anas ZAHOURI - Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-07-25T12:18:25+02:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"Fonction d’ordre supérieur (Higher order functions)","url":"http://localhost:4000/java/fonctionnelle/2020/07/25/Fonction-d-ordre-superieur.html","dateModified":"2020-07-25T12:18:25+02:00","datePublished":"2020-07-25T12:18:25+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/java/fonctionnelle/2020/07/25/Fonction-d-ordre-superieur.html"},"description":"Une fonction d’ordre supérieur est une fonction qui soit prend en paramètre une autre fonction (méthode), soit retourne une fonction après son exécution. Dans ce tutoriel sur les fonctions d’ordre supérieur, je montrerai quelques exemples de fonctions d’ordre supérieur en Java.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+</head>
+
+<body>
+  <main class="container">
+    <section class="about">
+      <a href="/"><img src="/assets/portfolio.png" alt="Anas ZAHOURI"></a>
+      <h2 id="title">
+        <a href="/">Anas ZAHOURI</a>
+      </h2>
+      <p class="tagline">Software Craftsman | Clean Coder | Full stack</p>
+      <ul class="social"><a href="https://github.com/Anas-ZAHOURI">
+          <li>
+            <i class="icon-github-circled"></i>
+          </li>
+        </a><a href="https://www.linkedin.com/in/anas-zahouri-a9222648">
+          <li>
+            <i class="icon-linkedin-squared"></i>
+          </li>
+        </a><a href="https://twitter.com/zahouri_anas">
+          <li>
+            <i class="icon-twitter-squared"></i>
+          </li>
+        </a></ul><p>&copy;
+        2020</p><div>
+        <p>Dark Mode
+          <i class="icon-moon"></i>
+          <label class="switch">
+            <input type="checkbox" id="dark-mode-toggle">
+            <span class="slider round" onclick="toggleDarkMode()"></span>
+          </label>
+        </p>
+      </div>
+      <script type="text/javascript" src="/assets/js/darkmode.js"></script></section>
+    <section class="content">
+      <div class="post-container">
+  <a class="post-link" href="/java/fonctionnelle/2020/07/25/Fonction-d-ordre-superieur.html">
+    <h2 class="post-title">Fonction d&#39;ordre supérieur (Higher order functions)</h2>
+  </a>
+  <div class="post-meta">
+    <div class="post-date"><i class="icon-calendar"></i>Jul 25, 2020</div><ul class="post-categories"><li>JAVA</li><li>FONCTIONNELLE</li></ul></div>
+  <div class="post">
+    <p>Une <strong>fonction d’ordre supérieur</strong> est une fonction qui soit prend en paramètre une autre fonction (méthode), soit retourne une fonction après son exécution. Dans ce tutoriel sur les fonctions d’ordre supérieur, je montrerai quelques exemples de fonctions d’ordre supérieur en Java.</p>
+
+<h2 id="tri-des-collections">Tri des collections</h2>
+
+<p>Le premier exemple d’une fonction d’ordre supérieur est la méthode <strong>Collections.sort()</strong> qui prend un comparateur comme paramètre. En voici un exemple :</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
+	<span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"One"</span><span class="o">);</span>
+	<span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"Abc"</span><span class="o">);</span>
+	<span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"BCD"</span><span class="o">);</span>
+
+	<span class="nc">Collections</span><span class="o">.</span><span class="na">sort</span><span class="o">(</span><span class="n">list</span><span class="o">,</span> <span class="o">(</span><span class="nc">String</span> <span class="n">a</span><span class="o">,</span> <span class="nc">String</span> <span class="n">b</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="n">a</span><span class="o">.</span><span class="na">compareTo</span><span class="o">(</span><span class="n">b</span><span class="o">);</span>
+	<span class="o">});</span>
+	<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">list</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>Le <strong>Collection.sort()</strong> prend deux paramètres. Le premier paramètre est une liste et le second paramètre est une** expression lambda (fonction)<strong>. Le paramètre lambda ici est celui qui fait de la **Collections.sort()</strong> une fonction d’ordre supérieur.</p>
+
+<h2 id="tri-par-ordre-inversé">Tri par ordre inversé</h2>
+
+<p>Voici un autre exemple de fonction d’ordre supérieur. Cette fois-ci, il s’agit d’une fonction qui retourne une autre fonction comme résultat:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="nc">Comparator</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">comparator</span> <span class="o">=</span> <span class="o">(</span><span class="nc">String</span> <span class="n">a</span><span class="o">,</span> <span class="nc">String</span> <span class="n">b</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="n">a</span><span class="o">.</span><span class="na">compareTo</span><span class="o">(</span><span class="n">b</span><span class="o">);</span>
+	<span class="o">};</span>
+	
+	<span class="c1">// ou simplement par exemple:</span>
+	<span class="c1">// Comparator&lt;String&gt; comparator = Comparator.naturalOrder(); </span>
+	
+	<span class="nc">Comparator</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">comparatorReversed</span> <span class="o">=</span> <span class="n">comparator</span><span class="o">.</span><span class="na">reversed</span><span class="o">();</span>
+	<span class="nc">Collections</span><span class="o">.</span><span class="na">sort</span><span class="o">(</span><span class="n">list</span><span class="o">,</span> <span class="n">comparatorReversed</span><span class="o">);</span>
+	<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">list</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>Cet exemple crée dans un premier temps une <strong>expression lambda Java</strong> qui implémente l’interface du <strong>Compactor</strong>.</p>
+
+<p>Ensuite, l’exemple appelle la méthode <strong>reversed()</strong> du comparateur lambda. La méthode <strong>reversed()</strong> renvoie un nouvelle expression lambda du comparateur, qui inverse le résultat renvoyé par la première implémentation du comparateur. Par <strong>“inverser”</strong>, je veux dire qu’elle retourne simplement <strong>-1 * comparator.compare(a,b)</strong></p>
+
+<p>Comme la méthode <strong>reversed()</strong> renvoie une <strong>lambda (fonction)</strong>, la méthode <strong>reversed()</strong> est considérée comme une fonction d’ordre supérieur.</p>
+
+<p>Troisièmement, l’exemple trie la liste des chaînes de caractères à l’aide de la méthode <strong>Collections.sort()</strong>.</p>
+
+  </div></div>
+
+    </section>
+  </main>
+  <script src="/assets/js/simple-jekyll-search.min.js"></script>
+  <script src="/assets/js/search.js"></script>
+  
+</body>
+
+</html>
