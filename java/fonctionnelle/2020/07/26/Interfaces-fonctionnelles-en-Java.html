@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300|Raleway:400,700" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<title>Interfaces fonctionnelles en Java</title>
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Interfaces fonctionnelles en Java | Anas ZAHOURI - Blog</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Interfaces fonctionnelles en Java" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Le terme interface fonctionnelle a fait son apparition dans Java 8. En Java, une interface fonctionnelle est une interface qui contient seulement une méthode abstraite (non implémentée). Une interface fonctionnelle peut comporter des méthodes par défaut et des méthodes statiques qui possèdent une implémentation, en plus de la méthode unique non implémentée." />
+<meta property="og:description" content="Le terme interface fonctionnelle a fait son apparition dans Java 8. En Java, une interface fonctionnelle est une interface qui contient seulement une méthode abstraite (non implémentée). Une interface fonctionnelle peut comporter des méthodes par défaut et des méthodes statiques qui possèdent une implémentation, en plus de la méthode unique non implémentée." />
+<link rel="canonical" href="http://localhost:4000/java/fonctionnelle/2020/07/26/Interfaces-fonctionnelles-en-Java.html" />
+<meta property="og:url" content="http://localhost:4000/java/fonctionnelle/2020/07/26/Interfaces-fonctionnelles-en-Java.html" />
+<meta property="og:site_name" content="Anas ZAHOURI - Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-07-26T12:18:25+02:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"Interfaces fonctionnelles en Java","url":"http://localhost:4000/java/fonctionnelle/2020/07/26/Interfaces-fonctionnelles-en-Java.html","dateModified":"2020-07-26T12:18:25+02:00","datePublished":"2020-07-26T12:18:25+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/java/fonctionnelle/2020/07/26/Interfaces-fonctionnelles-en-Java.html"},"description":"Le terme interface fonctionnelle a fait son apparition dans Java 8. En Java, une interface fonctionnelle est une interface qui contient seulement une méthode abstraite (non implémentée). Une interface fonctionnelle peut comporter des méthodes par défaut et des méthodes statiques qui possèdent une implémentation, en plus de la méthode unique non implémentée.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+</head>
+
+<body>
+  <main class="container">
+    <section class="about">
+      <a href="/"><img src="/assets/portfolio.png" alt="Anas ZAHOURI"></a>
+      <h2 id="title">
+        <a href="/">Anas ZAHOURI</a>
+      </h2>
+      <p class="tagline">Software Craftsman | Clean Coder | Full stack</p>
+      <ul class="social"><a href="https://github.com/Anas-ZAHOURI">
+          <li>
+            <i class="icon-github-circled"></i>
+          </li>
+        </a><a href="https://www.linkedin.com/in/anas-zahouri-a9222648">
+          <li>
+            <i class="icon-linkedin-squared"></i>
+          </li>
+        </a><a href="https://twitter.com/zahouri_anas">
+          <li>
+            <i class="icon-twitter-squared"></i>
+          </li>
+        </a></ul><p>&copy;
+        2020</p><div>
+        <p>Dark Mode
+          <i class="icon-moon"></i>
+          <label class="switch">
+            <input type="checkbox" id="dark-mode-toggle">
+            <span class="slider round" onclick="toggleDarkMode()"></span>
+          </label>
+        </p>
+      </div>
+      <script type="text/javascript" src="/assets/js/darkmode.js"></script></section>
+    <section class="content">
+      <div class="post-container">
+  <a class="post-link" href="/java/fonctionnelle/2020/07/26/Interfaces-fonctionnelles-en-Java.html">
+    <h2 class="post-title">Interfaces fonctionnelles en Java</h2>
+  </a>
+  <div class="post-meta">
+    <div class="post-date"><i class="icon-calendar"></i>Jul 26, 2020</div><ul class="post-categories"><li>JAVA</li><li>FONCTIONNELLE</li></ul></div>
+  <div class="post">
+    <p>Le terme <strong>interface fonctionnelle</strong> a fait son apparition dans Java 8. En Java, une <strong>interface fonctionnelle</strong> est une interface qui contient seulement une méthode abstraite (non implémentée). Une <strong>interface fonctionnelle</strong> peut comporter des méthodes par défaut et des méthodes statiques qui possèdent une implémentation, en plus de la méthode unique non implémentée.</p>
+
+<p>Voici un exemple d’interface fonctionnelle Java :</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">MonInterfaceFonctionnelle</span> <span class="o">{</span>
+		<span class="kd">public</span> <span class="kt">void</span> <span class="nf">execute</span><span class="o">();</span>
+	<span class="o">}</span>
+</code></pre></div></div>
+
+<p>L’exemple ci-dessus est considéré comme étant une <strong>interface fonctionnelle</strong> en Java car elle ne contient qu’une seule méthode, et cette méthode n’a pas d’implémentation. Normalement les méthodes d’une interface Java ne contient pas d’implémentations, par contre ces <strong>méthodes par défaut</strong> peut contenir des implémentations, ou bien ces méthodes statiques. Vous trouverez ci-dessous un autre exemple d’interface fonctionnelle Java, avec des implémentations de certaines des méthodes :</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">MonInterfaceFonctionnelle2</span><span class="o">{</span>
+		<span class="kd">public</span> <span class="kt">void</span> <span class="nf">execute</span><span class="o">();</span>
+
+		<span class="kd">public</span> <span class="k">default</span> <span class="kt">void</span> <span class="nf">print</span><span class="o">(</span><span class="nc">String</span> <span class="n">text</span><span class="o">)</span> <span class="o">{</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">text</span><span class="o">);</span>
+		<span class="o">}</span>
+
+		<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">print</span><span class="o">(</span><span class="nc">String</span> <span class="n">text</span><span class="o">,</span> <span class="nc">PrintWriter</span> <span class="n">writer</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+			<span class="n">writer</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">text</span><span class="o">);</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+</code></pre></div></div>
+
+<p>L’exemple ci-dessus est toujours considéré comme une <strong>interface fonctionnelle</strong> en Java, car il ne contient qu’une seule méthode non implémentée.</p>
+
+<h2 id="les-interfaces-fonctionnelles-peuvent-être-implémentées-avec-une-expression-lambda">Les interfaces fonctionnelles peuvent être implémentées avec une expression lambda</h2>
+
+<p><strong>Les interfaces fonctionnelles</strong> en Java peuvent être implémentées avec une expression Lambda Java. Voici un exemple qui implémente l’interface fonctionnelle <strong>MyFunctionalInterface</strong> définie au début de ce tutoriel sur l’interface fonctionnelle Java :</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="nc">MonInterfaceFonctionnelle</span> <span class="n">lambda</span> <span class="o">=</span> <span class="o">()</span> <span class="o">-&gt;</span> <span class="o">{</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Executing..."</span><span class="o">);</span>
+	<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Dans cet exemple <strong>l’expression lambda</strong> Java implémente la seule méthode/fonction abstraite de l’interface.</p>
+
+<h2 id="interfaces-fonctionnelles-disponible-en-java">Interfaces fonctionnelles disponible en Java</h2>
+
+<p>Java contient un ensemble d’interfaces fonctionnelles conçues pour faire face aux cas d’utilisation les plus courants, ce qui évite de créer vos propres interfaces fonctionnelles pour chaque petit cas d’utilisation. Dans les sections suivantes, je décrirai certaines de ces interfaces fonctionnelles intégrées dans Java.</p>
+
+<h3 id="function">Function</h3>
+
+<p>L’interface Java <strong>Function</strong> (<strong>java.util.function.Function</strong>) est l’une des interfaces fonctionnelles les plus importantes de Java. L’interface <strong>Function</strong> représente une fonction (méthode) qui prend un seul paramètre et renvoie une seule valeur. Voici à quoi ressemble la définition de l’interface <strong>Function</strong> :</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Function</span><span class="o">&lt;</span><span class="no">T</span><span class="o">,</span><span class="no">R</span><span class="o">&gt;</span> <span class="o">{</span>
+		<span class="kd">public</span> <span class="o">&lt;</span><span class="no">R</span><span class="o">&gt;</span> <span class="nf">apply</span><span class="o">(</span><span class="no">T</span> <span class="n">parameter</span><span class="o">);</span>
+	<span class="o">}</span>
+</code></pre></div></div>
+
+<p>L’interface <strong>Function</strong> contient en réalité quelques méthodes supplémentaires outre celle indiquée ci-dessus, mais comme elles sont toutes fournies avec une implémentation par défaut, vous n’avez pas besoin à implémenter ces méthodes supplémentaires.</p>
+
+<p>La seule méthode que vous devez implémenter pour mettre en œuvre l’interface <strong>Function</strong> est la méthode <strong>apply()</strong>. Voici un exemple d’implémentation de la fonction :</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="kd">public</span> <span class="kd">class</span> <span class="nc">AjouterTrois</span> <span class="kd">implements</span> <span class="nc">Function</span><span class="o">&lt;</span><span class="nc">Long</span><span class="o">,</span> <span class="nc">Long</span><span class="o">&gt;</span> <span class="o">{</span>
+
+		<span class="nd">@Override</span>
+		<span class="kd">public</span> <span class="nc">Long</span> <span class="nf">apply</span><span class="o">(</span><span class="nc">Long</span> <span class="n">unLong</span><span class="o">)</span> <span class="o">{</span>
+			<span class="k">return</span> <span class="n">unLong</span> <span class="o">+</span> <span class="mi">3</span><span class="o">;</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Cette implémentation de Function implémente la méthode <strong>apply()</strong> qui prend un <strong>Long</strong> comme paramètre, et retourne un <strong>Long</strong>.  Voici un exemple d’utilisation de la classe AjouterTrois ci-dessus :</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="nc">Function</span><span class="o">&lt;</span><span class="nc">Long</span><span class="o">,</span> <span class="nc">Long</span><span class="o">&gt;</span> <span class="n">ajouteur</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AjouterTrois</span> <span class="o">();</span>
+	<span class="nc">Long</span> <span class="n">result</span> <span class="o">=</span> <span class="n">adder</span><span class="o">.</span><span class="na">apply</span><span class="o">((</span><span class="kt">long</span><span class="o">)</span> <span class="mi">4</span><span class="o">);</span>
+	<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"result = "</span> <span class="o">+</span> <span class="n">result</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>Tout d’abord, cet exemple crée une nouvelle instance <strong>AjouterTrois</strong> et l’affecte à une variable de type <strong>Function</strong>. Ensuite, l’exemple appelle la méthode <strong>apply()</strong> de l’instance de <strong>AjouterTrois</strong>. Troisièmement, l’exemple imprime le résultat (qui est 7).</p>
+
+<p>Vous pouvez également implémenter l’interface <strong>Function</strong> en utilisant une <strong>expression lambda</strong> Java. Voici à quoi cela ressemble :</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="nc">Function</span><span class="o">&lt;</span><span class="nc">Long</span><span class="o">,</span> <span class="nc">Long</span><span class="o">&gt;</span> <span class="n">ajouteur</span> <span class="o">=</span> <span class="o">(</span><span class="n">value</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="n">value</span> <span class="o">+</span> <span class="mi">3</span><span class="o">;</span>
+	<span class="nc">Long</span> <span class="n">resultaLambda</span> <span class="o">=</span> <span class="n">adder</span><span class="o">.</span><span class="na">apply</span><span class="o">((</span><span class="kt">long</span><span class="o">)</span> <span class="mi">8</span><span class="o">);</span>
+	<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"resultLambda = "</span> <span class="o">+</span> <span class="n">resultLambda</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>Comme vous pouvez le voir, l’implémentation de l’interface <strong>Function</strong> est désormais intégrée au niveau de la déclaration de la variable <strong>resultaLambda</strong>, plutôt que dans une classe séparée. C’est un peu plus court, et nous pouvons voir directement dans le code ci-dessus ce qu’elle fait.</p>
+
+<h3 id="predicate">Predicate</h3>
+
+<p>L’interface Java <strong>Predicate</strong> (<strong>java.util.function.Predicate</strong>) représente une fonction simple qui prend une seule valeur comme paramètre, et retourne un booléen. Voici à quoi ressemble la définition de l’interface fonctionnelle <strong>Predicate</strong> :</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Predicate</span> <span class="o">{</span>
+		<span class="kt">boolean</span> <span class="nf">test</span><span class="o">(</span><span class="no">T</span> <span class="n">t</span><span class="o">);</span>
+	<span class="o">}</span>
+</code></pre></div></div>
+
+<p>L’interface <strong>Predicate</strong> contient plus de méthodes que la méthode <strong>test()</strong>, mais le reste des méthodes sont des méthodes par défaut ou statiques que vous n’avez pas à implémenter.</p>
+
+<p>Vous pouvez implémenter l’interface <strong>Predicate</strong> en utilisant une classe, comme ceci :</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="kd">public</span> <span class="kd">class</span> <span class="nc">VerifierLeNull</span> <span class="kd">implements</span> <span class="nc">Predicate</span> <span class="o">{</span>
+		<span class="nd">@Override</span>
+		<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">test</span><span class="o">(</span><span class="nc">Object</span> <span class="n">o</span><span class="o">)</span> <span class="o">{</span>
+			<span class="k">return</span> <span class="n">o</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">;</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Vous pouvez également implémenter l’interface Java <strong>Predicate</strong> en utilisant une <strong>expression Lambda</strong>. Voici un exemple d’implémentation de l’interface <strong>Predicate</strong> à l’aide d’une expression lambda Java :</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="nc">Predicate</span> <span class="n">predicate</span> <span class="o">=</span> <span class="o">(</span><span class="n">value</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="n">value</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">;</span>
+</code></pre></div></div>
+
+<p>Cette implémentation lambda de l’interface <strong>Predicate</strong> fait effectivement la même chose que l’implémentation ci-dessus qui utilise une classe.</p>
+
+<h3 id="unaryoperator">UnaryOperator</h3>
+
+<p>L’interface Java <strong>UnaryOperator</strong> est une interface fonctionnelle qui représente une opération qui prend un seul paramètre et renvoie un paramètre du même type. Voici un exemple d’implémentation de Java <strong>UnaryOperator</strong> :</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="nc">UnaryOperator</span><span class="o">&lt;</span><span class="nc">Personne</span><span class="o">&gt;</span> <span class="n">unaryOperator</span> <span class="o">=</span> 
+			<span class="o">(</span><span class="n">person</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">{</span> <span class="n">personne</span><span class="o">.</span><span class="na">nom</span> <span class="o">=</span> <span class="s">"nouveau nom"</span><span class="o">;</span> <span class="k">return</span> <span class="n">personne</span><span class="o">;</span> <span class="o">};</span>
+</code></pre></div></div>
+
+<p>L’interface <strong>UnaryOperator</strong> peut être utilisée pour représenter une opération qui prend un objet spécifique comme paramètre, modifie cet objet et le renvoie à nouveau - éventuellement dans le cadre d’une chaîne de traitement de flux fonctionnel.</p>
+
+<h3 id="binaryoperator">BinaryOperator</h3>
+
+<p>L’interface Java <strong>BinaryOperator</strong> est une interface fonctionnelle qui représente une opération qui prend deux paramètres et renvoie une seule valeur. Les deux paramètres et le type de retour doivent être identique.</p>
+
+<p>L’interface Java <strong>BinaryOperator</strong> est utile pour mettre en œuvre des fonctions qui additionnent, soustraient, divisent, multiplient, etc. deux éléments du même type, et qui renvoient un troisième élément du même type.</p>
+
+<p>Voici un exemple d’implémentation de l’interface <strong>BinaryOperator</strong> :</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="nc">BinaryOperator</span><span class="o">&lt;</span><span class="nc">MaValeur</span><span class="o">&gt;</span> <span class="n">binaryOperator</span> <span class="o">=</span>
+			<span class="o">(</span><span class="n">valuer1</span><span class="o">,</span> <span class="n">valuer2</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">{</span> <span class="n">valuer1</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">valuer2</span><span class="o">);</span> <span class="k">return</span> <span class="n">valuer1</span><span class="o">;</span> <span class="o">};</span>
+</code></pre></div></div>
+
+<h3 id="supplier">Supplier</h3>
+
+<p>L’interface Java <strong>Supplier</strong> est une interface fonctionnelle qui représente une fonction qui fournit une valeur X. L’interface <strong>Supplier</strong> peut également être considérée comme une interface <strong>Factory</strong>. Voici un exemple d’implémentation de l’interface Java <strong>Supplier</strong> :</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="nc">Supplier</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">supplier</span> <span class="o">=</span> <span class="o">()</span> <span class="o">-&gt;</span> <span class="k">new</span> <span class="nc">Integer</span><span class="o">((</span><span class="kt">int</span><span class="o">)</span> <span class="o">(</span><span class="nc">Math</span><span class="o">.</span><span class="na">random</span><span class="o">()</span> <span class="o">*</span> <span class="mi">1000</span><span class="no">D</span><span class="o">));</span>
+</code></pre></div></div>
+
+<p>Cette implémentation de Java <strong>Supplier</strong> renvoie une nouvelle instance <strong>d’Integer</strong> avec une valeur aléatoire entre 0 et 1000.</p>
+
+<h3 id="consumer">Consumer</h3>
+
+<p>L’interface Java <strong>Consumer</strong> est une interface fonctionnelle qui représente une fonction qui consomme une valeur sans en retouner une autre valeur. Cette interface peut être utiliser pour l’impression d’une valeur, ou l’écriture dans un fichier, ou sur le réseau, etc. Voici un exemple d’implémentation de l’interface Java <strong>Consumer</strong> :</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="nc">Consumer</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">consumer</span> <span class="o">=</span> <span class="o">(</span><span class="n">value</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">value</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>Cette implémentation Java <strong>Consumer</strong> imprime la valeur qui lui est passée en paramètre dans <strong>System.out</strong>.</p>
+
+
+  </div></div>
+
+    </section>
+  </main><script async src="https://www.googletagmanager.com/gtag/js?id=UA-173517490-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-173517490-1');
+  </script>
+  <script src="/assets/js/simple-jekyll-search.min.js"></script>
+  <script src="/assets/js/search.js"></script>
+  
+</body>
+
+</html>
